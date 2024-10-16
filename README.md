@@ -1,6 +1,6 @@
 # i3 pimp-module
 
-PimpMyRice module for i3.
+[PimpMyRice](https://github.com/daddodev/pimpmyrice) module for [i3](https://i3wm.org).
 
 ## INSTALL
 
