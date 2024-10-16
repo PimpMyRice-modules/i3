@@ -1,0 +1,38 @@
+font {{font.normal}} {{font.size}}
+
+gaps inner {{gaps.inner}}
+gaps outer {{gaps.outer}}
+
+#border_radius {{border.radius}}
+
+for_window [class=.*] border pixel {{border.width}}
+
+
+set $active {{border.active}}
+set $inactive {{border.inactive}}
+set $active.ind {{border.active.alt}}
+set $inactive.ind {{border.inactive.alt}}
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $active #285577 #ffffff $active.ind   $active
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        $inactive #222222 #888888 $inactive.ind   $inactive
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+bar {
+    status_command i3status
+    colors {
+        background {{bar.bg}}
+        statusline {{bar.fg}}
+        separator {{border.inactive}}
+
+        focused_workspace  {{accent.bg.alt}} {{accent.bg}} {{accent.fg}}
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
+    }
+}

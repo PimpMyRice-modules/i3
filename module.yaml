@@ -1,0 +1,4 @@
+enabled: false
+run:
+    - file: '{{config_dir}}/i3/pimp.conf'
+    - shell: 'i3-msg reload'
