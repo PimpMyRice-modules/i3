@@ -5,7 +5,7 @@
 ## INSTALL
 
 ```bash
-rice install module pimp://i3
+pimp clone module pimp://i3
 ```
 
 In your `config` delete any appearance settings and the `bar {}` section, then add this line:
