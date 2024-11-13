@@ -1,6 +1,5 @@
 os: linux
 run:
-    - if:
-      running: "i3"
+    - if_running: "i3"
     - file: '{{config_dir}}/i3/pimp.conf'
     - shell: 'i3-msg reload'
