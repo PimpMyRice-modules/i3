@@ -6,14 +6,11 @@ os:
 run:
   - action: if_running
     program_name: i3
-<<<<<<< Updated upstream
   - action: file
     target: "{{config_dir}}/i3/pimp.conf"
-=======
-
+    
   - action: file
     target: "{{config_dir}}/i3/pimp.conf"
 
->>>>>>> Stashed changes
   - action: shell
     command: i3-msg reload
