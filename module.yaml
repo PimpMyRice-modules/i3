@@ -1,5 +1,19 @@
-os: linux
+# yaml-language-server: $schema=../../.json_schemas/module.json
+
+os:
+  - linux
+
 run:
-    - if_running: "i3"
-    - file: '{{config_dir}}/i3/pimp.conf'
-    - shell: 'i3-msg reload'
+  - action: if_running
+    program_name: i3
+<<<<<<< Updated upstream
+  - action: file
+    target: "{{config_dir}}/i3/pimp.conf"
+=======
+
+  - action: file
+    target: "{{config_dir}}/i3/pimp.conf"
+
+>>>>>>> Stashed changes
+  - action: shell
+    command: i3-msg reload
